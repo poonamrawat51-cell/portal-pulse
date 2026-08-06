@@ -1,10 +1,8 @@
 'use client'
 
-import { Check, FileText, Wrench, Zap } from 'lucide-react'
+import { Check, FileText, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-
-const CALENDLY_URL = 'https://calendly.com/portal-auditor/portal-fix-sprint'
 
 type Tier = {
   id: string
@@ -54,23 +52,6 @@ const tiers: Tier[] = [
     href: '#audit',
     featured: true,
   },
-  {
-    id: 'fix',
-    name: 'Full Portal Fix',
-    price: '$1,500',
-    cadence: 'consulting sprint',
-    icon: Wrench,
-    description: 'We fix it for you — a hands-on sprint to remediate every issue.',
-    features: [
-      'Everything in Pro Audit',
-      'Hands-on remediation by experts',
-      'Workflow & routing rebuild',
-      'Data cleanup & dedupe',
-      'Live walkthrough & handoff',
-    ],
-    cta: 'Book a sprint',
-    href: CALENDLY_URL,
-  },
 ]
 
 export function Pricing() {
@@ -81,12 +62,11 @@ export function Pricing() {
           Start free. Fix what&apos;s leaking revenue.
         </h2>
         <p className="mx-auto mt-4 max-w-lg text-pretty text-base leading-relaxed text-muted-foreground">
-          Diagnose for free, unlock the full report when you&apos;re ready, or bring us
-          in to remediate the whole portal.
+          Diagnose for free, then unlock the full report when you&apos;re ready.
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
         {tiers.map((tier) => {
           const Icon = tier.icon
           const isExternal = tier.href?.startsWith('http')
