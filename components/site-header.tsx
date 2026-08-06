@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from 'react'
 import { Activity } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { BookingModal } from '@/components/booking-modal'
 
 const navItems = [
   { id: 'audit', label: 'Audit Engine' },
@@ -14,7 +13,6 @@ const navItems = [
 
 export function SiteHeader() {
   const [active, setActive] = useState<string>('')
-  const [bookingOpen, setBookingOpen] = useState(false)
 
   const scrollToId = useCallback((id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -75,17 +73,10 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Button
-          size="sm"
-          variant="outline"
-          className="font-medium"
-          onClick={() => setBookingOpen(true)}
-        >
-          Book a walkthrough
+        <Button size="sm" className="font-medium" onClick={() => scrollToId('audit')}>
+          Run Free Audit
         </Button>
       </div>
-
-      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
     </header>
   )
 }
