@@ -49,7 +49,7 @@ const tiers: Tier[] = [
       'Share with your RevOps team',
     ],
     cta: 'Unlock PDF report',
-    href: 'https://portal-pulse.lemonsqueezy.com/checkout/buy/13b1ab3a-c511-4b84-b9ca-5fb0efb9d841?discount=LAUNCH10',
+    href: 'https://portal-pulse.lemonsqueezy.com/checkout/buy/13b1ab3a-c511-4b84-b9ca-5fb0efb9d841',
     featured: true,
   },
 ]
