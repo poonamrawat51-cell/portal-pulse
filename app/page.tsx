@@ -19,3 +19,10 @@ export default function Page() {
     </main>
   )
 }
+<footer className="w-full border-t border-slate-800 py-6 text-center text-sm text-slate-400">
+  <div className="flex justify-center space-x-6 mb-4">
+    <a href="/contact" className="hover:text-white transition-colors">Contact Us</a>
+    <a href="mailto:portalpulse.support@gmail.com" className="hover:text-white transition-colors">Support</a>
+  </div>
+  <p>© {new Date().getFullYear()} Portal Pulse. All rights reserved.</p>
+</footer>
